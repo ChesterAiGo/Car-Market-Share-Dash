@@ -1,0 +1,7 @@
+dash
+altair
+dash_bootstrap_components
+plotly
+pandas
+dash_daq
+markupsafe==2.0.1
