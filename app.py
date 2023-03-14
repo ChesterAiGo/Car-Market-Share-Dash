@@ -1,6 +1,5 @@
 from dash import html, dcc, Input, Output
 import altair as alt
-from vega_datasets import data
 import dash_bootstrap_components as dbc
 import dash
 import plotly.express as px
