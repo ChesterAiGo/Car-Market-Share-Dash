@@ -1,7 +1,7 @@
 # CarMarketStats
 
 CarMarketStats - designed to simplify the process of selecting your next vehicle.
-App is running at: https://carmarketstats.onrender.com
+App is running at: https://car-market-share-dash.onrender.com
 
 ## Introduction
 

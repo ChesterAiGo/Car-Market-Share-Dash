@@ -1,6 +1,6 @@
 # CarMarketStats - Proposal
 
-App is running at: https://carmarketstats.onrender.com
+App is running at: https://car-market-share-dash.onrender.com
 
 
 ## Motivation and Purpose
