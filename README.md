@@ -1,2 +1,6 @@
-# Car-Market-Share-Dash
-A Dash app that helps you get a better understanding of automobile's market share
+# CarMarketStats
+
+CarMarketStats - designed to simplify the process of selecting your next vehicle.
+
+## Author
+Chester Wang

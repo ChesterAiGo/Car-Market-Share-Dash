@@ -3,51 +3,106 @@ import altair as alt
 from vega_datasets import data
 import dash_bootstrap_components as dbc
 import dash
+import plotly.express as px
+import pandas as pd
+import dash_daq as daq
 
 
-# Read in global data
-cars = data.cars()
 
-# Setup app and layout/frontend
+'''
+Define the app and load the data
+'''
+# Load data here
+data = pd.read_csv("./data/data.csv")
+
+# Create the Dash app
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-app.layout = dbc.Container([
-    html.H1('My mudplank'),
-    dbc.Row([
-        dbc.Col([
+
+
+'''
+Define the frontend
+'''
+
+# Define the app layout
+app.layout = html.Div([
+    html.H1('CarMarketStats - Understand the Current Car Market :)', style={'text-align': 'center', 'border-bottom': '2px dashed', 'padding-bottom': '10px'}),
+
+    html.Div([
+        html.Label('Car Market Share Pie Chart (sales in thousands)'),
+        dcc.Graph(id='chart', style={'margin-top': '20px'}),
+        dcc.RadioItems(
+            id='chart-type',
+            options=[{'label': 'By Manufacturer (all)', 'value': 'Manufacturer'},
+                     {'label': 'By Model (top 10)', 'value': 'Model'}],
+            value='Manufacturer',
+            labelStyle={'display': 'inline-block', 'margin-right': '50px', 'margin-top': '-30px'},
+            style={'text-align': 'center', 'padding-bottom': '-40px', 'margin-bottom': '20px'}
+        ),
+    ], style={'display': 'flex', 'flex-direction': 'column', 'align-items': 'center', 'border-bottom': '2px dashed'}),
+
+    html.Div([
+        html.Label('Car Sorted by Certain Factor'),
+        dcc.Graph(id='bar-chart', style={'margin-top': '20px'}),
+        html.Div([
             dcc.Dropdown(
-                id='xcol-widget',
-                value='Horsepower',  # REQUIRED to show the plot on the first page load
-                options=[{'label': col, 'value': col} for col in cars.columns]),
-            dcc.Dropdown(
-                id='ycol-widget',
-                value='Displacement',  # REQUIRED to show the plot on the first page load
-                options=[{'label': col, 'value': col} for col in cars.columns])],
-            md=4),
-        dbc.Col([
-            dbc.Row([
-                dbc.Col(
-                    dbc.Card(
-                        dbc.CardBody(html.H5('Key value')),
-                        color='warning')),
-                dbc.Col(
-                    dbc.Card(
-                        dbc.CardBody(html.H5('Key value')),
-                        color='info', inverse=True, style={'text-align': 'center'}))]),
-            html.Iframe(
-                id='scatter',
-                style={'border-width': '0', 'width': '100%', 'height': '400px'})])])])
-# Set up callbacks/backend
+                id='sort-by',
+                options=[{'label': 'Price', 'value': 'Price_in_thousands'},
+                         {'label': 'Fuel Efficiency', 'value': 'Fuel_efficiency'}],
+                value='Price_in_thousands',
+                style={'width': '500px', 'justify-content': 'center', 'margin-bottom': '20px'}
+            ),
+            daq.Slider(
+                id='k',
+                min=1,
+                max=153,
+                step=1,
+                value=10,
+                marks={i: str(i) for i in range(1, 154, 10)},
+                size=500
+            )
+    ])
+    ], style={'display': 'flex', 'flex-direction': 'column', 'align-items': 'center',
+              'margin-top': '10px', 'border-bottom': '2px dashed', 'padding-bottom': '50px'}),
+
+    html.H5('Copyright @ Chester 2023', style={'text-align': 'center'}),
+
+])
+
+'''
+Define the backend
+'''
+
+# Piechart
 @app.callback(
-    Output('scatter', 'srcDoc'),
-    Input('xcol-widget', 'value'),
-    Input('ycol-widget', 'value'))
-def plot_altair(xcol, ycol):
-    chart = alt.Chart(cars).mark_point().encode(
-        x=xcol,
-        y=ycol,
-        tooltip='Horsepower').interactive()
-    return chart.to_html()
+    dash.dependencies.Output('chart', 'figure'),
+    [dash.dependencies.Input('chart-type', 'value')]
+)
+def update_chart(chart_type):
+    if chart_type == 'Manufacturer':
+        aggregated = data.groupby('Manufacturer')['Sales_in_thousands'].sum()
+        labels = list(aggregated.index)
+        values = list(aggregated)
+    else:
+        top_10_sales = data.sort_values(by='Sales_in_thousands', ascending=False).head(10)
+        labels = list(top_10_sales['Manufacturer'] + ': ' + top_10_sales['Model'])
+        values = list(top_10_sales['Sales_in_thousands'])
+
+    fig = px.pie(values=values, names=labels)
+    return fig
+
+# Barchart
+@app.callback(
+    dash.dependencies.Output('bar-chart', 'figure'),
+    [dash.dependencies.Input('sort-by', 'value'), dash.dependencies.Input('k', 'value')]
+)
+def update_bar_chart(sort_by, k=10):
+    data_sorted = data.sort_values(by=sort_by, ascending=False).head(k)
+    data_sorted['agg_name'] = data_sorted['Manufacturer'] + ': ' + data_sorted['Model']
+    name_conversion = {"Price_in_thousands": "Price (in thousands USD)", "Fuel_efficiency": "Fuel Efficiency"}
+    fig = px.bar(data_sorted, x='agg_name', y=sort_by)
+    fig.update_layout(yaxis_title=name_conversion[sort_by])
+    return fig
+
 
 if __name__ == '__main__':
     app.run_server(host='127.0.0.1', port=8050, debug=True)
-    # app.run_server(debug=True)

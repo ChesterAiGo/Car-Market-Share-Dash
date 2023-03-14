@@ -1,0 +1,154 @@
+Manufacturer,Model,Sales_in_thousands,Price_in_thousands,Fuel_efficiency
+Acura,Integra,16.919,21.5,28.0
+Acura,TL,39.384,28.4,25.0
+Acura,RL,8.588,42.0,22.0
+Audi,A4,20.397,23.99,27.0
+Audi,A6,18.78,33.95,22.0
+Audi,A8,1.38,62.0,21.0
+BMW,323i,19.747,26.99,26.0
+BMW,328i,9.231,33.4,24.0
+BMW,528i,17.527,38.9,25.0
+Buick,Century,91.561,21.975,25.0
+Buick,Regal,39.35,25.3,23.0
+Buick,Park Avenue,27.851,31.965,24.0
+Buick,LeSabre,83.257,27.885,25.0
+Cadillac,DeVille,63.729,39.895,22.0
+Cadillac,Seville,15.943,44.475,22.0
+Cadillac,Eldorado,6.536,39.665,22.0
+Cadillac,Catera,11.185,31.01,22.0
+Cadillac,Escalade,14.785,46.225,15.0
+Chevrolet,Cavalier,145.519,13.26,27.0
+Chevrolet,Malibu,135.126,16.535,25.0
+Chevrolet,Lumina,24.629,18.89,25.0
+Chevrolet,Monte Carlo,42.593,19.39,27.0
+Chevrolet,Camaro,26.402,24.34,25.0
+Chevrolet,Corvette,17.947,45.705,22.0
+Chevrolet,Prizm,32.299,13.96,33.0
+Chevrolet,Metro,21.855,9.235,45.0
+Chevrolet,Impala,107.995,18.89,27.0
+Chrysler,Sebring Coupe,7.854,19.84,24.0
+Chrysler,Sebring Conv.,32.775,24.495,24.0
+Chrysler,Concorde,31.148,22.245,26.0
+Chrysler,Cirrus,32.306,16.48,27.0
+Chrysler,LHS,13.462,28.34,23.0
+Chrysler,300M,30.696,29.185,23.0
+Dodge,Neon,76.034,12.64,29.0
+Dodge,Avenger,4.734,19.045,24.0
+Dodge,Stratus,71.186,20.23,24.0
+Dodge,Viper,0.916,69.725,16.0
+Dodge,Ram Pickup,227.061,19.46,17.0
+Dodge,Ram Wagon,16.767,21.315,15.0
+Dodge,Ram Van,31.038,18.575,16.0
+Dodge,Dakota,111.313,16.98,19.0
+Dodge,Durango,101.323,26.31,17.0
+Dodge,Caravan,181.749,19.565,24.0
+Ford,Escort,70.227,12.07,30.0
+Ford,Mustang,113.369,21.56,24.0
+Ford,Contour,35.068,17.035,25.0
+Ford,Taurus,245.815,17.885,24.0
+Ford,Focus,175.67,12.315,30.0
+Ford,Crown Victoria,63.403,22.195,21.0
+Ford,Explorer,276.747,31.93,19.0
+Ford,Windstar,155.787,21.41,21.0
+Ford,Expedition,125.338,36.135,16.0
+Ford,Ranger,220.65,12.05,23.0
+Ford,F-Series,540.561,26.935,18.0
+Honda,Civic,199.685,12.885,32.0
+Honda,Accord,230.902,15.35,27.0
+Honda,CR-V,73.203,20.55,24.0
+Honda,Passport,12.855,26.6,19.0
+Honda,Odyssey,76.029,26.0,23.0
+Hyundai,Accent,41.184,9.699,31.0
+Hyundai,Elantra,66.692,11.799,27.0
+Hyundai,Sonata,29.45,14.999,25.0
+Infiniti,I30,23.713,29.465,25.0
+Jaguar,S-Type,15.467,42.8,21.0
+Jeep,Wrangler,55.557,14.46,17.0
+Jeep,Cherokee,80.556,21.62,20.0
+Jeep,Grand Cherokee,157.04,26.895,19.0
+Lexus,ES300,24.072,31.505,23.0
+Lexus,GS300,12.698,37.805,23.0
+Lexus,GS400,3.334,46.305,21.0
+Lexus,LS400,6.375,54.005,22.0
+Lexus,LX470,9.126,60.105,15.0
+Lexus,RX300,51.238,34.605,21.0
+Lincoln,Continental,13.798,39.08,22.0
+Lincoln,Town car,48.911,43.33,21.0
+Lincoln,Navigator,22.925,42.66,15.0
+Mitsubishi,Mirage,26.232,13.987,30.0
+Mitsubishi,Eclipse,42.541,19.047,24.0
+Mitsubishi,Galant,55.616,17.357,25.0
+Mitsubishi,Diamante,5.711,24.997,22.0
+Mitsubishi,3000GT,0.11,25.45,21.0
+Mitsubishi,Montero,11.337,31.807,18.0
+Mitsubishi,Montero Sport,39.348,22.527,20.0
+Mercury,Mystique,14.351,16.24,28.0
+Mercury,Cougar,26.529,16.54,30.0
+Mercury,Sable,67.956,19.035,24.0
+Mercury,Grand Marquis,81.174,22.605,21.0
+Mercury,Mountaineer,27.609,27.56,18.0
+Mercury,Villager,20.38,22.51,21.0
+Mercedes-B,C-Class,18.392,31.75,26.0
+Mercedes-B,E-Class,27.602,49.9,25.0
+Mercedes-B,S-Class,16.774,69.7,21.0
+Mercedes-B,SL-Class,3.311,82.6,20.0
+Mercedes-B,SLK,7.998,38.9,26.0
+Mercedes-B,SLK230,1.526,41.0,27.0
+Mercedes-B,CLK Coupe,11.592,41.6,26.0
+Mercedes-B,CL500,0.954,85.5,20.0
+Mercedes-B,M-Class,28.976,35.3,20.0
+Nissan,Sentra,42.643,13.499,30.0
+Nissan,Altima,88.094,20.39,25.0
+Nissan,Maxima,79.853,26.249,25.0
+Nissan,Quest,27.308,26.399,21.0
+Nissan,Pathfinder,42.574,29.299,19.0
+Nissan,Xterra,54.158,22.799,18.0
+Nissan,Frontier,65.005,17.89,18.0
+Oldsmobile,Cutlass,1.112,18.145,25.0
+Oldsmobile,Alero,80.255,18.27,27.0
+Oldsmobile,Aurora,14.69,36.229,22.0
+Oldsmobile,Bravada,20.017,31.598,19.0
+Oldsmobile,Silhouette,24.361,25.345,22.0
+Plymouth,Neon,32.734,12.64,29.0
+Plymouth,Breeze,5.24,16.08,27.0
+Plymouth,Voyager,24.155,18.85,24.0
+Plymouth,Prowler,1.872,43.0,21.0
+Pontiac,Sunfire,51.645,21.61,27.0
+Pontiac,Grand Am,131.097,19.72,25.0
+Pontiac,Firebird,19.911,25.31,25.0
+Pontiac,Grand Prix,92.364,21.665,25.0
+Pontiac,Bonneville,35.945,23.755,24.0
+Pontiac,Montana,39.572,25.635,23.0
+Porsche,Boxter,8.982,41.43,22.0
+Porsche,Carrera Coupe,1.28,71.02,21.0
+Porsche,Carrera Cabrio,1.866,74.97,23.0
+Saab,5-Sep,9.191,33.12,23.0
+Saab,3-Sep,12.115,26.1,23.0
+Saturn,SL,80.62,10.685,33.0
+Saturn,SC,24.546,12.535,33.0
+Saturn,SW,5.223,14.29,31.0
+Saturn,LW,8.472,18.835,27.0
+Saturn,LS,49.989,15.01,28.0
+Subaru,Outback,47.107,22.695,25.0
+Subaru,Forester,33.028,20.095,24.0
+Toyota,Corolla,142.535,13.108,33.0
+Toyota,Camry,247.994,17.518,27.0
+Toyota,Avalon,63.849,25.545,26.0
+Toyota,Celica,33.269,16.875,31.0
+Toyota,Tacoma,84.087,11.528,23.0
+Toyota,Sienna,65.119,22.368,22.0
+Toyota,RAV4,25.106,16.888,27.0
+Toyota,4Runner,68.411,22.288,23.0
+Toyota,Land Cruiser,9.835,51.728,15.0
+Volkswagen,Golf,9.761,14.9,26.0
+Volkswagen,Jetta,83.721,16.7,26.0
+Volkswagen,Passat,51.102,21.2,27.0
+Volkswagen,Cabrio,9.569,19.99,26.0
+Volkswagen,GTI,5.596,17.5,26.0
+Volkswagen,Beetle,49.463,15.9,26.0
+Volvo,S40,16.957,23.4,25.0
+Volvo,V40,3.545,24.4,25.0
+Volvo,S70,15.245,27.5,25.0
+Volvo,V70,17.531,28.8,25.0
+Volvo,C70,3.493,45.5,23.0
+Volvo,S80,18.969,36.0,24.0
