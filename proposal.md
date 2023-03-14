@@ -9,7 +9,7 @@ This is where our app comes in. **We design this app to help people navigate the
 
 ## Description of Data
 
-This dashboard utilizes the `Car Sales` dataset, which can be found on Kaggle at: https://www.kaggle.com/datasets/gagandeep16/car-sales. The original dataset contains information on 157 different car models, including sales value, vehicle type, and engine size. For simplicity, we have chosen to focus on only four columns for analysis and demonstration purposes: `Manufacturer`, `Model`, `Sales_in_thousands`, `Price_in_thousands`, and `Fuel_efficiency`. We have removed rows with missing values for analysis. 
+This dashboard utilizes the `Car Sales` dataset, which can be found on Kaggle at: https://www.kaggle.com/datasets/gagandeep16/car-sales. The original dataset contains information on 157 different car models, including sales value, vehicle type, and engine size. For simplicity, we have chosen to focus on only four columns for analysis and demonstration purposes: `Manufacturer`, `Model`, `Sales_in_thousands`, `Price_in_thousands`, and `Fuel_efficiency`. We have removed rows with missing values for analysis.
 
 We offer analyses at different levels, including `Manufacturer` and `Model`, in order to make our app more comprehensive. As a result, you may notice that we have aggregated data using both `Manufacturer` and `Model`. Additionally, we have sorted the cars based on the remaining three columns, providing users with the necessary information to make informed decisions when selecting their next vehicle.
 
@@ -34,4 +34,4 @@ After searching online, Michelle discovered CarMarketStats, an App which she fou
 
 ### App Sketch
 
-TODO
+![](./img/layout.png)
