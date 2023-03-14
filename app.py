@@ -13,7 +13,7 @@ import dash_daq as daq
 Define the app and load the data
 '''
 # Load data here
-data = pd.read_csv("./data/data.csv")
+data = pd.read_csv("https://raw.githubusercontent.com/ChesterAiGo/Car-Market-Share-Dash/main/data/data.csv")
 
 # Create the Dash app
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
