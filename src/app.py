@@ -16,7 +16,7 @@ data = pd.read_csv("https://raw.githubusercontent.com/ChesterAiGo/Car-Market-Sha
 
 # Create the Dash app
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-
+server = app.server
 
 '''
 Define the frontend
@@ -105,4 +105,5 @@ def update_bar_chart(sort_by, k=10):
 
 
 if __name__ == '__main__':
-    app.run_server(host='127.0.0.1', port=8050, debug=True)
+    app.run_server(debug=True)
+    # app.run_server(host='127.0.0.1', port=8050, debug=True)
