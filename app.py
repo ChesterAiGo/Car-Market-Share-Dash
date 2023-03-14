@@ -100,7 +100,8 @@ def update_bar_chart(sort_by, k=10):
     data_sorted['agg_name'] = data_sorted['Manufacturer'] + ': ' + data_sorted['Model']
     name_conversion = {"Price_in_thousands": "Price (in thousands USD)", "Fuel_efficiency": "Fuel Efficiency"}
     fig = px.bar(data_sorted, x='agg_name', y=sort_by)
-    fig.update_layout(yaxis_title=name_conversion[sort_by])
+
+    fig.update_layout(xaxis_title='Model Name', yaxis_title=name_conversion[sort_by])
     return fig
 
 
